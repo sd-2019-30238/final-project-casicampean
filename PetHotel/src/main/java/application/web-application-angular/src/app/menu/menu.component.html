@@ -1,0 +1,16 @@
+<header>
+  <nav class ="navbar navbar-expand-md navbar-dark bg-dark">
+    <div><a class="navbar-brand">Animal Application</a></div>
+
+    <ul class="navbar-nav">
+      <li><a *ngIf="loginService.isUserLoggedIn() && loginService.isStaff()" routerLink="/accounts" class="nav-link">All Users</a></li>
+      <li><a *ngIf="loginService.isUserLoggedIn() && !loginService.isStaff()" routerLink="/getAllAnimals" class="nav-link">List My Animals</a></li>
+      <li><a *ngIf="loginService.isUserLoggedIn() && !loginService.isStaff()" routerLink="/animals" class="nav-link">Add Animal</a></li>
+      <li><a *ngIf="loginService.isUserLoggedIn() && loginService.isStaff()" routerLink="/registeredAnimal" class="nav-link">Registered Animals</a></li>
+      <li><a *ngIf="loginService.isUserLoggedIn() && !loginService.isStaff()" routerLink="/myAnimals" class="nav-link">My Registered Animals</a></li>
+      <li><a *ngIf="loginService.isUserLoggedIn() && loginService.isStaff()" routerLink="/service-list" class="nav-link">Services</a></li>
+      <li><a *ngIf="loginService.isUserLoggedIn()" class="list-inline-item" routerLink="/logout" class="nav-link">Logout</a></li>
+    </ul>
+  </nav>
+</header>
+

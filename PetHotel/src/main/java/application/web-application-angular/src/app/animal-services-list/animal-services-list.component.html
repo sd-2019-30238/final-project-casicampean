@@ -1,0 +1,30 @@
+<div class="card my-7">
+  <div class="card-body">
+    <table class="table table-bordered table-striped">
+      <thead class="thead-dark">
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Owner</th>
+        <th scope="col">AnimalID</th>
+        <th scope="col">Animal Name</th>
+        <th scope="col">Service</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let animal of services">
+        <td>{{ animal.id}}</td>
+        <td>{{ animal.username }}</td>
+        <td>{{ animal.animalID }}</td>
+        <td>{{ animal.animal_name }}</td>
+        <td>{{ animal.service_type }}</td>
+
+
+      </tr>
+      </tbody>
+
+    </table>
+  </div>
+</div>
+
+
+
