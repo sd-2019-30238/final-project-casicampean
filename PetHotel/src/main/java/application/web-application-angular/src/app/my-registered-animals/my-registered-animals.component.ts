@@ -6,6 +6,7 @@ import {AuthenticationService} from "../service/authentication.service";
 import {LoginComponent} from "../login/login.component";
 import {Animal} from "../../models/animal";
 import {NotificationService} from "../service/notification.service";
+import {AnimalSService} from "../service/animal-s.service";
 
 @Component({
   selector: 'app-my-books',
@@ -20,7 +21,7 @@ export class MyRegisteredAnimalsComponent implements OnInit {
   takeRegisteredAnimal = new RegisteredAnimal();
   public notification = '';
 
-  constructor(private notificationService: NotificationService, private registeredAnimalsService: RegisteredAnimalsService, private  authenticationService: AuthenticationService) {
+  constructor(private animalServiceService: AnimalSService, private notificationService: NotificationService, private registeredAnimalsService: RegisteredAnimalsService, private  authenticationService: AuthenticationService) {
     let stompClient = this.notificationService.connect();
     stompClient.connect({}, frame => {
 

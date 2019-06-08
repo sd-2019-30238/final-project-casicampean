@@ -47,7 +47,7 @@ public class AnimalServiceController {
         for (RegisteredAnimal registeredAnimal : allRegisteredAnimals) {
 
 
-            if (registeredAnimal.getAnimalID() == animalService.getAnimalID() && registeredAnimal.getOwnerID() == animalService.getOwnerID()) {
+            if (registeredAnimal.getAnimalID() == animalService.getAnimalID() && registeredAnimal.getUsername().equals(animalService.getUsername())) {
                     template.convertAndSend("/topic/notification/",
                             "Your animal, " + animal.get().getName() + animalServiceFactory.getService(animalService.getService_type()).getService());
             }

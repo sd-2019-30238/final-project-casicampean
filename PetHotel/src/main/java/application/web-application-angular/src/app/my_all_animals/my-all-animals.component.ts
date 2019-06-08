@@ -72,13 +72,13 @@ export class MyAllAnimalsComponent implements OnInit {
     console.log(this.registeredAnimals);
     console.log(this.animalId);
 
-    for(let i=0; i<this.registeredAnimals.length;i++){
-      if(this.registeredAnimals[i].animalID === this.animalId){
+    //for(let i=0; i<this.registeredAnimals.length;i++){
+      //if(this.registeredAnimals[i].animalID !== this.animalId){
         this.registeredAnimalsService.registerAnimal(this.registeredAnimal).subscribe();
-      }
-    }
+     // }
+    //}
 
-    this.animalService.sendAnimal(this.animal);
+    //this.animalService.sendAnimal(this.animal);
 
   }
 
